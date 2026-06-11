@@ -1,0 +1,389 @@
+/* style.css - 森罗万象 完全扁平深色主题（无圆角、无白色） */
+
+/* ========== 全局根样式 ========== */
+.root {
+    -fx-background-color: #1E1E1E;
+    -fx-background-radius: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-control-inner-background: #252526;
+    -fx-base: #1E1E1E;
+}
+
+/* ========== 所有控件的基础重置 ========== */
+* {
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* ========== 按钮 ========== */
+.button {
+    -fx-background-color: #3E3E42;
+    -fx-border-color: #3E3E42;
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-text-fill: #E0E0E0;
+    -fx-padding: 6 16 6 16;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+    -fx-background-insets: 0;
+}
+.button:hover {
+    -fx-background-color: #505050;
+    -fx-border-color: #3E3E42;
+}
+.button:pressed {
+    -fx-background-color: #606060;
+}
+
+.button-primary {
+    -fx-background-color: #0078D7;
+    -fx-border-color: #0078D7;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.button-primary:hover {
+    -fx-background-color: #106EBE;
+    -fx-border-color: #0078D7;
+}
+
+/* ========== 文本输入框 ========== */
+.text-field, .text-area {
+    -fx-background-color: #3E3E42;
+    -fx-border-color: #3E3E42;
+    -fx-border-width: 1;
+    -fx-text-fill: #E0E0E0;
+    -fx-font-size: 12px;
+    -fx-padding: 6 12 6 12;
+}
+.text-area .content {
+    -fx-background-color: #3E3E42;
+}
+
+/* ========== 表格及相关区域 ========== */
+.table-view {
+    -fx-background-color: #252526;
+    -fx-border-color: #3E3E42;
+    -fx-border-width: 1;
+}
+.table-view .column-header-background {
+    -fx-background-color: #3E3E42;
+    -fx-border-color: transparent transparent #3E3E42 transparent;
+}
+.table-view .column-header {
+    -fx-background-color: #3E3E42;
+    -fx-size: 32px;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #C0C0C0;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+.table-row-cell {
+    -fx-background-color: #252526;
+    -fx-text-fill: #E0E0E0;
+    -fx-pref-height: 32px;
+}
+.table-row-cell:selected {
+    -fx-background-color: #2D2D30;
+}
+.table-cell {
+    -fx-border-color: transparent;
+    -fx-text-fill: #E0E0E0;
+}
+/* 表格空白区域（无数据时） */
+.table-view .placeholder .label {
+    -fx-text-fill: #B0B0B0;
+}
+.table-view .virtual-flow {
+    -fx-background-color: #252526;
+}
+.table-view .corner {
+    -fx-background-color: #3E3E42;
+}
+
+/* ========== 进度条 ========== */
+.progress-bar {
+    -fx-accent: #0078D7;
+    -fx-padding: 0;
+    -fx-control-inner-background: #3E3E42;
+}
+.progress-bar .track {
+    -fx-background-color: #3E3E42;
+}
+.progress-bar .bar {
+    -fx-background-color: #0078D7;
+}
+
+/* ========== 组合框及下拉列表 ========== */
+.combo-box {
+    -fx-background-color: #3E3E42;
+    -fx-border-color: #3E3E42;
+    -fx-border-width: 1;
+}
+.combo-box .list-cell {
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: #3E3E42;
+}
+.combo-box .arrow-button {
+    -fx-background-color: #3E3E42;
+}
+.combo-box .arrow {
+    -fx-background-color: #B0B0B0;
+}
+/* 下拉弹出列表 */
+.combo-box-popup .list-view {
+    -fx-background-color: #3E3E42;
+    -fx-background-radius: 0;
+}
+.combo-box-popup .list-cell {
+    -fx-text-fill: #E0E0E0;
+    -fx-background-color: #3E3E42;
+}
+.combo-box-popup .list-cell:filled:selected,
+.combo-box-popup .list-cell:filled:focused {
+    -fx-background-color: #505050;
+}
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #505050;
+}
+
+/* ========== 滑块 ========== */
+.slider {
+    -fx-base: #1F1F1F;
+    -fx-background: #1F1F1F;
+    -fx-control-inner-background: #3E3E42;
+    -fx-accent: #0078D7;
+    -fx-tick-label-fill: #E0E0E0;
+    -fx-background-color: transparent;
+}
+.slider .track {
+    -fx-background-color: #3E3E42;
+    -fx-pref-height: 2;
+}
+.slider .thumb {
+    -fx-background-color: #0078D7;
+    -fx-pref-width: 12;
+    -fx-pref-height: 12;
+}
+/* 滑块刻度标签 */
+.slider .axis .tick-label {
+    -fx-text-fill: #E0E0E0;
+}
+
+/* ========== 滚动条（全面覆盖） ========== */
+.scroll-bar {
+    -fx-background-color: #2D2D30;
+}
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: #2D2D30;
+}
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #686868;
+}
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #858585;
+}
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: #2D2D30;
+}
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: #B0B0B0;
+    -fx-shape: "M0,0 L4,4 L8,0 Z";
+}
+.scroll-bar .increment-button:hover,
+.scroll-bar .decrement-button:hover {
+    -fx-background-color: #3E3E42;
+}
+/* 滚动条角 */
+.scroll-pane .corner {
+    -fx-background-color: #2D2D30;
+}
+
+/* ========== 菜单栏和上下文菜单 ========== */
+.menu-bar {
+    -fx-background-color: #2D2D30;
+    -fx-padding: 2 8 2 8;
+    -fx-border-color: transparent transparent #3E3E42 transparent;
+    -fx-border-width: 1;
+}
+.menu-item {
+    -fx-background-color: #2D2D30;
+    -fx-text-fill: #E0E0E0;
+}
+.menu-item:focused, .menu-item:hovered {
+    -fx-background-color: #505050;
+}
+.context-menu {
+    -fx-background-color: #3E3E42;
+}
+.context-menu .menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #E0E0E0;
+}
+.context-menu .menu-item:focused {
+    -fx-background-color: #505050;
+}
+/* 菜单分隔线 */
+.menu .separator .line,
+.context-menu .separator .line {
+    -fx-border-color: #3E3E42;
+    -fx-border-width: 1;
+}
+
+/* ========== 分割线 ========== */
+.separator .line {
+    -fx-border-color: #3E3E42;
+    -fx-border-width: 1;
+    -fx-pref-height: 1;
+}
+
+/* ========== 标签 ========== */
+.label {
+    -fx-text-fill: #E0E0E0;
+    -fx-font-size: 12px;
+}
+.label-bold {
+    -fx-font-weight: bold;
+}
+.label-muted {
+    -fx-text-fill: #B0B0B0;
+}
+
+/* ========== 面板容器（自定义类） ========== */
+.flat-container {
+    -fx-background-color: #252526;
+    -fx-border-color: #3E3E42;
+    -fx-border-width: 1;
+    -fx-padding: 12;
+}
+.transparent-scroll-pane {
+    -fx-background-color: transparent;
+}
+.transparent-scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* 预览面板样式 */
+.preview-pane {
+    -fx-background-color: #252526;
+}
+.preview-pane .text-area {
+    -fx-background-color: #2D2D30;
+    -fx-text-fill: #E0E0E0;
+}
+
+/* 媒体控制按钮 */
+.media-button {
+    -fx-background-color: #3E3E42;
+    -fx-border-color: #3E3E42;
+    -fx-padding: 4 12 4 12;
+    -fx-font-size: 12px;
+}
+.media-button:hover {
+    -fx-background-color: #505050;
+}
+.media-slider {
+    -fx-control-inner-background: #3E3E42;
+    -fx-accent: #0078D7;
+}
+
+/* ========== 对话框 (Alert) 完全覆盖 ========== */
+.dialog-pane {
+    -fx-background-color: #2D2D30;
+    -fx-border-color: #3E3E42;
+    -fx-border-width: 1;
+}
+.dialog-pane .header-panel {
+    -fx-background-color: #2D2D30;
+}
+.dialog-pane .content.label {
+    -fx-text-fill: #E0E0E0;
+}
+.dialog-pane .button-bar .button {
+    -fx-background-color: #3E3E42;
+    -fx-border-color: #3E3E42;
+    -fx-text-fill: #E0E0E0;
+}
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: #505050;
+}
+.dialog-pane .button-bar .button:default {
+    -fx-background-color: #0078D7;
+    -fx-text-fill: white;
+}
+
+/* ========== 工具提示 ========== */
+.tooltip {
+    -fx-background-color: #2D2D30;
+    -fx-text-fill: #E0E0E0;
+    -fx-border-color: #3E3E42;
+    -fx-border-width: 1;
+    -fx-font-size: 11px;
+}
+
+/* ========== 复选框 & 单选按钮 ========== */
+.check-box .box, .radio-button .radio {
+    -fx-background-color: #3E3E42;
+    -fx-border-color: #3E3E42;
+    -fx-border-width: 1;
+}
+.check-box:selected .mark, .radio-button:selected .dot {
+    -fx-background-color: #0078D7;
+}
+.check-box .text, .radio-button .text {
+    -fx-text-fill: #E0E0E0;
+}
+
+/* ========== 选项卡（如果有） ========== */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #252526;
+}
+.tab-pane .tab {
+    -fx-background-color: #3E3E42;
+    -fx-text-fill: #E0E0E0;
+}
+.tab-pane .tab:selected {
+    -fx-background-color: #0078D7;
+}
+.tab-pane .tab .tab-label {
+    -fx-text-fill: inherit;
+}
+.tab-pane .tab-content-area {
+    -fx-background-color: #252526;
+}
+
+/* ========== 拆分窗格分隔线（已通过 Java 设置颜色，此处为额外保险） ========== */
+.split-pane-divider {
+    -fx-background-color: #3E3E42;
+    -fx-padding: 0 1 0 1;
+}
+
+/* ========== 底部控制台 ========== */
+.bottom-console {
+    -fx-background-color: #1E1E1E;
+    -fx-border-color: #3E3E42 transparent transparent transparent;
+    -fx-border-width: 1;
+}
+
+/* ========== 参数面板 ========== */
+.param-panel {
+    -fx-background-color: transparent;
+}
+
+/* ========== 强制所有内部容器无白色 ========== */
+.scroll-pane, .split-pane, .anchor-pane, .border-pane, .vbox, .hbox {
+    -fx-background-color: transparent;
+}
+
+/* 最终保险：任何可能出现白色的地方 */
+* {
+    -fx-control-inner-background: #252526;
+}
